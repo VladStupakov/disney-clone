@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.nav`
@@ -39,48 +40,46 @@ export const NavMenu = styled.ul`
   }
 `
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(Link)`
   display: flex;
   height: 100%;
   cursor: pointer;
   position: relative;
   margin-right: 22px;
-  a {
-    display: flex;
-    align-items: center;
-    img {
-      min-width: 30px;
-      width: 30px;
-      @media (max-width: 1250px){
-        display: none;
-      }
-      transition: all 200ms linear 0s;
+  align-items: center;
+  img {
+    min-width: 30px;
+    width: 30px;
+    @media (max-width: 1250px){
+      display: none;
     }
-    span {
-      text-transform: uppercase;
-      color: rgb(249, 249, 249);
-      font-size: 22px;
-      letter-spacing: 1.42px;
-      position: relative;
-      &:before {
-        height: 2px;
-        bottom: -4px;
-        left: 0px;
-        right: 0px;
-        background-color: rgb(249, 249, 249);
-        content: "";      
-        position: absolute;
-        transform: scaleX(0);
-        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-        width: auto;
-      }
-    }
-    &:hover {
-      span:before {
-        transform: scaleX(1);      
-      }
+    transition: all 200ms linear 0s;
+  }
+  span {
+    text-transform: uppercase;
+    color: rgb(249, 249, 249);
+    font-size: 22px;
+    letter-spacing: 1.42px;
+    position: relative;
+    &:before {
+      height: 2px;
+      bottom: -4px;
+      left: 0px;
+      right: 0px;
+      background-color: rgb(249, 249, 249);
+      content: "";      
+      position: absolute;
+      transform: scaleX(0);
+      transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+      width: auto;
     }
   }
+  &:hover {
+    span:before {
+      transform: scaleX(1);      
+    }
+  }
+  
 `
 
 export const LoginBtn = styled.a`
@@ -97,6 +96,40 @@ export const LoginBtn = styled.a`
   &:hover{
     background-color: #f9f9f9;
     color: #000;
+  }
+`
+
+export const SignOut = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  border: 2px solid #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+`
+
+export const ProfilePicture = styled.img`
+  width: 100%;
+  border-radius: 50%;
+`
+
+export const SignOutBtn = styled.button`
+  position: absolute;
+  top: 48px;
+  right: 10px;
+  padding: 5px;
+  min-width: 100px;
+  background-color: #090b13;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  color: #f9f9f9;
+  cursor: pointer;
+  opacity: ${props => props.visibility ? 1 : 0};
+  transition-duration: .3s;
+  &:hover{
+    background-color: #20232e;
   }
 `
 

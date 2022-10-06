@@ -1,8 +1,11 @@
 import React from 'react'
+import { Container } from '../styles/HomepageStyles'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Container>
+      home
+    </Container>
   )
 }
 
