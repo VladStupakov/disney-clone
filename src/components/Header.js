@@ -38,7 +38,6 @@ const Header = () => {
   }
 
   const setUser = user => {
-    console.log(user);
     dispatch(
       setUserDetails({
         name: user.displayName,

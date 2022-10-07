@@ -10,7 +10,6 @@ height: 70px;
 background-color: #090b13;
 display: flex;
 align-items: center;
-justify-content: space-between;
 padding: 0 40px;
 z-index: 3;
 @media (max-width: 1106px) {
@@ -92,7 +91,8 @@ export const LoginBtn = styled.a`
   text-align: center;
   font-size: 18px;
   transition: all .2s ease 0s;
-
+  position: absolute;
+  right: 30px;
   &:hover{
     background-color: #f9f9f9;
     color: #000;
@@ -101,13 +101,12 @@ export const LoginBtn = styled.a`
 
 export const SignOut = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   border: 2px solid #f9f9f9;
   border-radius: 50%;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  right: 30px;
 `
 
 export const ProfilePicture = styled.img`
