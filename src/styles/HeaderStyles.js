@@ -101,7 +101,7 @@ export const LoginBtn = styled.a`
 
 export const SignOut = styled.div`
   display: flex;
-  width: 50px;
+  width: 34px;
   border: 2px solid #f9f9f9;
   border-radius: 50%;
   cursor: pointer;
@@ -116,8 +116,8 @@ export const ProfilePicture = styled.img`
 
 export const SignOutBtn = styled.button`
   position: absolute;
-  top: 48px;
-  right: 10px;
+  top: 34px;
+  right: 15px;
   padding: 5px;
   min-width: 100px;
   background-color: #090b13;
