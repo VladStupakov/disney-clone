@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MovieSectionTitle, MoviesShortListContainer, MoviesShortListContent, MovieWrapper, } from '../styles/HomepageStyles';
@@ -31,7 +31,7 @@ const MoviesShortList = ({ sectionName }) => {
 
   useEffect(() =>{
     setExtendedMovies([...movies, ...movies, ...movies, ...movies])
-  },[])
+  },[movies])
 
   console.log(movies)
 
